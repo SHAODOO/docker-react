@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t shaodoo/docker-react -f Docker.dev .
+
+script:
+  - docker run shaodoo/docker-react npm run test -- --coverage
