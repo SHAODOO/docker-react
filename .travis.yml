@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t shaodoo/docker-react -f Docker.dev .
+  - docker build -t shaodoo/docker-react -f Dockerfile .
 
 script:
-  - docker run shaodoo/docker-react
+  - docker run shaodoo/docker-react npm run test -- --coverage
