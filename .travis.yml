@@ -7,3 +7,4 @@ before_install:
 
 script:
   - docker run -d --name docker-react shaodoo/docker-react npm run test -- --coverage
+  - docker attach docker-react
